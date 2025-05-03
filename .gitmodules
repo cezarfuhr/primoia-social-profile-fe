@@ -1,0 +1,3 @@
+[submodule "mfe/login"]
+	path = mfe/login
+	url = https://github.com/cezarfuhr/primoia-social-profile-fe-login-mfe.git
