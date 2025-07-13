@@ -2,3 +2,8 @@
 	path = mfe/login
 	url = https://github.com/cezarfuhr/primoia-social-profile-fe-login-mfe.git
 	branch = main
+
+[submodule "mfe/home"]
+    path = mfe/home
+    url = https://github.com/cezarfuhr/primoia-social-profile-fe-home-mfe.git
+	branch = main
