@@ -1,0 +1,14 @@
+<div class="agent-demo-container">
+  <h1>Demonstração de Agentes IA</h1>
+  <p>Observe a IA trabalhando em tempo real!</p>
+
+  <div class="input-section">
+    <textarea [(ngModel)]="prompt" placeholder="Descreva a tarefa para a IA..."></textarea>
+    <button (click)="runAgent()">Executar Agente</button>
+  </div>
+
+  <div class="output-section">
+    <h2>Progresso do Agente:</h2>
+    <pre>{{ agentOutput }}</pre>
+  </div>
+</div>
