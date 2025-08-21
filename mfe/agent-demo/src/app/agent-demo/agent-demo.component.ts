@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './agent-demo.component.html',
   styleUrls: ['./agent-demo.component.scss']
 })
-export class AgentDemoComponent implements OnInit {
+export class AgentDemoComponent implements OnInit, OnDestroy {
   prompt: string = '';
   agentOutput: string = 'Aguardando comando...';
   private eventSource: EventSource | undefined;
