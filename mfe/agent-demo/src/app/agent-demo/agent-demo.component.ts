@@ -29,8 +29,8 @@ export class AgentDemoComponent implements OnInit, OnDestroy {
     }
 
     this.agentOutput = 'Iniciando agente...';
-    // Chamar o backend (codenoob-social-profile)
-    this.http.post('http://localhost:8080/api/agent-demo/run', { prompt: this.prompt }) // Use 8080 for codenoob-social-profile
+    // Chamar o backend através do proxy nginx
+    this.http.post('/api/agent-demo/run', { prompt: this.prompt })
       .subscribe({
         next: (response: any) => {
           this.agentOutput = 'Comando enviado. Conectando ao stream de eventos...';
@@ -49,8 +49,8 @@ export class AgentDemoComponent implements OnInit, OnDestroy {
       this.eventSource.close();
     }
 
-    // Conectar ao endpoint SSE do backend
-    this.eventSource = new EventSource('http://localhost:8080/api/agent-demo/stream'); // Use 8080 for codenoob-social-profile
+    // Conectar ao endpoint SSE do backend através do proxy nginx
+    this.eventSource = new EventSource('/api/agent-demo/stream');
 
     this.eventSource.onmessage = (event) => {
       const data = JSON.parse(event.data);

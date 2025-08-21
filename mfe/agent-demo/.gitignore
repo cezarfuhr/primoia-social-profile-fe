@@ -1,0 +1,8 @@
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+/node_modules
+/npm-debug.log
+/.angular/cache/
